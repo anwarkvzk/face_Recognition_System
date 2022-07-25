@@ -50,6 +50,17 @@ class Face_Recognition_System:
         title_lbl.place(x=0, y=0, width=1530, height=45)
 
 
+        #Student button
+        img4 = Image.open("/home/anvar/Desktop/face_recognition/student1.jpg")
+        img4 = img4.resize((220, 220), Image.ANTIALIAS)
+        self.photoimg4 = ImageTk.PhotoImage(img4)
+
+        b1 = Button(bg_img, image=self.photoimg4, cursor='hand2')
+        b1.place(x=200, y=100, width=220, height=220)
+
+        b1_1 = Button(bg_img, text="Student Details", cursor='hand2', font=("times new roman", 15, "bold"), bg="darkblue", fg="white")
+        b1_1.place(x=200, y=300, width=220, height=40)
+
 if __name__ == "__main__":
     root = Tk()
     obj = Face_Recognition_System(root)
